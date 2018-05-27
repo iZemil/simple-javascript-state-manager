@@ -37,4 +37,3 @@ Syntax demos:
     store.do(incrementCount).do(decrementCount);
     store.do(changeName).do(clearStoreUnit);
 
-
