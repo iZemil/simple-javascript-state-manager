@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple JavaScript State Manager</title>
+</head>
+<body>
+    <script src="src/main.js"></script>
+    <script>
+        // Examples:
+        var initialState = {
+            count: 0,
+            map: [ 'Ivan', 'Petr', 'Nikolai', 'Alex' ],
+            form: {
+                name: '',
+                surname: '',
+                email: '',
+            },
+        };
+
+        var store = new Store(initialState);
+        store.do(incrementCount).do(decrementCount);
+
+        // Actions:
+        function incrementCount(s) {
+            s.count += 1;
+        }
+        function decrementCount(state) {
+            state.count -= 1;
+        }
+
+        function changeName(state) {
+            state.form.name += 'a';
+        }
+
+        function clearStoreUnit(s) {
+            delete s.form;
+        }
+
+        store.do(changeName).do(clearStoreUnit);
+
+        console.log(store.getState());
+    </script>
+</body>
+</html>
