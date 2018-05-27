@@ -4,8 +4,6 @@ Just for practice
 
 Syntax demos:
 
-`
-
     // Init:
     var initialState = {
         count: 0,
@@ -38,5 +36,5 @@ Syntax demos:
     // Execution:
     store.do(incrementCount).do(decrementCount);
     store.do(changeName).do(clearStoreUnit);
-`
+
 
