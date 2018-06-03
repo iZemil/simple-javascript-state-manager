@@ -42,4 +42,5 @@ Perhaps need to add:
 - subscribe on store changes;
 - nesting multiple stores in one
 - id for fields for fast finding
+- simple decorators adding
 
