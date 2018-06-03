@@ -36,4 +36,10 @@ Syntax demos:
     // Execution:
     store.do(incrementCount).do(decrementCount);
     store.do(changeName).do(clearStoreUnit);
+    
+Perhaps need to add: 
+
+- subscribe on store changes;
+- nesting multiple stores in one
+- id for fields for fast finding
 
